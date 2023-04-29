@@ -12096,7 +12096,8 @@ speechSynthesis.getVoices();
             this.isSearchAvatarLoading = false;
         }
         var avatarsArray = Array.from(avatars.values());
-        switch (this.searchAvatarSort) {
+        //Until done proper, don't bother sorting. Let the DB provider sort it themselves and it'll be better than this with the information they have.
+        /*switch (this.searchAvatarSort) {
             case 'updated':
                 avatarsArray.sort(compareByUpdatedAt);
                 break;
@@ -12106,7 +12107,7 @@ speechSynthesis.getVoices();
             case 'name':
                 avatarsArray.sort(compareByName);
                 break;
-        }
+        }//*/
         this.searchAvatarPageNum = 0;
         this.searchAvatarResults = avatarsArray;
         this.searchAvatarPage = avatarsArray.slice(0, 10);
